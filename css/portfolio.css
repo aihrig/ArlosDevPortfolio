@@ -16,17 +16,17 @@ html {
 
 /* Body */
 body {
-  margin: 0%; /* Ensures display goes to edge of browser */
-  opacity: 1; /* Opacity and transition affect the page loading fade-in effect */
-  transition: 3s opacity; /* Create 3 second fade in */
-  letter-spacing: 0.2vw;
-  font-family: Avant Garde, Helvetica;
-  font-size: 1.5vw;
-  overflow-x: hidden; /* Prevent horizontal scroll bar appearing when the quote is hovered*/
-  user-select: none;
+    margin: 0%; /* Ensures display goes to edge of browser */
+    opacity: 1; /* Opacity and transition affect the page loading fade-in effect */
+    transition: 3s opacity; /* Create 3 second fade in */
+    letter-spacing: 0.2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    overflow-x: hidden; /* Prevent horizontal scroll bar appearing when the quote is hovered*/
+    user-select: none;
 
-  /* Set up fade in effect */
-  /* transition: 1s; */
+    /* Set up fade in effect */
+    /* transition: 1s; */
 }
 
 /* This section contributes to the fade effect for the page when it loads */
@@ -37,7 +37,7 @@ body.fade-out {
 /* Main headings */
 h1 {
     text-transform: uppercase; /* Set all text to uppercase */
-    font-family: "Trebuchet MS", Optima;
+    font-family: 'Trebuchet MS', Optima;
     text-align: center;
     margin-top: -0.5%;
     color: #1a1a1a;
@@ -62,11 +62,12 @@ h1:hover {
     }
 }
 
-/* Paragraphs */
-p {
+/* Paragraphs, list items*/
+p,
+.list_item {
     font-family: Perpetua, Rockwell Extra Bold;
     text-align: justify; /* Justify text within paragraph elements */
-    letter-spacing: .1vw; /* Increase kerning slightly */
+    letter-spacing: 0.1vw; /* Increase kerning slightly */
     font-size: 1.5vw;
     padding-left: 1vw; /* Add padding to left of paragraph */
     padding-right: 1vw; /* Add padding to right of paragraph */
@@ -75,7 +76,7 @@ p {
 /* Paragraph hover effect */
 p:hover {
     transition: transform 1s; /* 1 second length of effect */
-    transform: scale(1.01); /* Expand paragraph sligtly */
+    transform: scale(1.008); /* Expand paragraph sligtly */
 }
 
 /* Center elements */
@@ -114,7 +115,7 @@ img {
 img:hover {
     filter: grayscale(5%); /* Bring most of the color back to image */
     transition: transform 1s; /* "Fade in" */
-    transform: scale(1.1); /* Increase image size slightly */
+    transform: scale(1.05); /* Increase image size slightly */
 }
 
 /* Center vertically for smaller screens */
@@ -187,22 +188,20 @@ footer {
     }
 }
 
-
-
 /* ========================================
    Navbar styling
    ======================================== */
 
 /* General navbar */
 .navbar {
-  overflow: hidden; /* Anything beyond navbar boundary is hidden */
-  background-color: black;
-  position: fixed; /* Keeps navbar at top of screen */
-  top: 0; /* No space above navbar */
-  width: 100%; /* Span entire width of page */
-  z-index: 1; /* Puts navbar on top of stack */
-  -webkit-animation: moveNav 1.5s; /* Safari 4.0 - 8.0 */
-  animation: moveNav 1.5s;
+    overflow: hidden; /* Anything beyond navbar boundary is hidden */
+    background-color: black;
+    position: fixed; /* Keeps navbar at top of screen */
+    top: 0; /* No space above navbar */
+    width: 100%; /* Span entire width of page */
+    z-index: 1; /* Puts navbar on top of stack */
+    -webkit-animation: moveNav 1.5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 1.5s;
 }
 
 .navbar a {
@@ -210,7 +209,7 @@ footer {
     display: block; /* Ensures that other text will be on same line */
     color: white; /* Link text color */
     background-color: black;
-    padding: .75vw 1vw; /* Padding around text */
+    padding: 0.75vw 1vw; /* Padding around text */
     text-decoration: none; /* Hide underline for links */
     font-family: Avant Garde, Helvetica;
     font-size: 1.5vw;
@@ -237,15 +236,23 @@ footer {
 /* moveNav animation effect - fly navbar in from left of screen */
 @keyframes moveNav {
     /* The translate[X|Y|Z] functions perform better than positions (top, right, bottom, left) */
-    from {transform: translateX(-100vw);} /* The navbar is starting off screen to the left */
-    to {transform: translateX(0vw);} /* This moves the navbar into place on the screen */
+    from {
+        transform: translateX(-100vw);
+    } /* The navbar is starting off screen to the left */
+    to {
+        transform: translateX(0vw);
+    } /* This moves the navbar into place on the screen */
 }
 
 /* moveNavText animation effect - lower text on to navbar */
 @keyframes moveNavText {
     /* The translate[X|Y|Z] functions perform better than positions (top, right, bottom, left) */
-    from {transform: translateY(-100vh);} /* Set navbar text above visible viewport */
-    to {transform: translateY(0vh);} /* Lower text onto navbar */
+    from {
+        transform: translateY(-100vh);
+    } /* Set navbar text above visible viewport */
+    to {
+        transform: translateY(0vh);
+    } /* Lower text onto navbar */
 }
 
 /* ========================================
@@ -282,19 +289,28 @@ footer {
 
 /* Video text animation - move text up from bottom on page load */
 @keyframes moveVideoText {
-    from {transform: translateY(-100vh);}
-    to {transform: translateY(0vh);}
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(0vh);
+    }
 }
 
 /* ========================================
    Slideshow Styling
    ======================================== */
 #Slideshow_Background {
-    background-color: rgba(255, 255, 255, 0.35); /* Create slight transparent white background placed over video in background */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.35
+    ); /* Create slight transparent white background placed over video in background */
 }
 
 .mySlides {
-    display: none; /* Prevent images from being display - will be handled by JS */
+    display: none; /* Prevent images from being displayed initially - will be handled by JS */
 }
 
 /* Slideshow -> container */
@@ -315,7 +331,8 @@ footer {
 }
 
 /* Next and Previous buttons */
-.Previous, .Next {
+.Previous,
+.Next {
     cursor: pointer;
     position: absolute; /* Allows prev/next buttons to be posisitioned relative to slideshow container */
     top: 50%; /* Move buttons half-way up */
@@ -336,8 +353,14 @@ footer {
 }
 
 /* Hover effect on slideshow buttons */
-.Previous:hover, .Next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Slight transparent background on buttons */
+.Previous:hover,
+.Next:hover {
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.8
+    ); /* Slight transparent background on buttons */
     color: white; /* Makes arrows on buttons white when hovered over*/
 }
 
@@ -352,7 +375,12 @@ footer {
     font-family: Perpetua, Rockwell Extra Bold;
     letter-spacing: 0.1vs;
     font-size: 1.5vw; /* Relative to view port */
-    background-color: rgba(0, 0, 0, 0.75); /* Slight transparent black background */
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.75
+    ); /* Slight transparent black background */
     font-weight: bold;
     border-radius: 0px 0px 7px 7px; /* Gives text background rounded corners on bottom left and right corners */
 }
@@ -371,7 +399,8 @@ footer {
 }
 
 /* Hover effect for slideshow dots */
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: black; /* Dot color when active or hovered */
 }
 
@@ -384,20 +413,29 @@ footer {
 }
 
 @-webkit-keyframes fade {
-    from {opacity: 0.4;} /* Image starts transparent */
-    to {opacity: 1;} /* Image ends fully opaque */
+    from {
+        opacity: 0.4;
+    } /* Image starts transparent */
+    to {
+        opacity: 1;
+    } /* Image ends fully opaque */
 }
 
 @keyframes fade {
-    from {opacity: 0.4;} /* Image starts transparent */
-    to {opacity: 1;} /* Image ends fully opaque */
+    from {
+        opacity: 0.4;
+    } /* Image starts transparent */
+    to {
+        opacity: 1;
+    } /* Image ends fully opaque */
 }
 /* End Slideshow Styling */
 
 /* ========================================
    Table Styling
    ======================================== */
-* { /* Apply to ALL elements */
+* {
+    /* Apply to ALL elements */
     box-sizing: border-box; /* Creates a box with a border for most text */
 }
 
@@ -413,7 +451,8 @@ footer {
     width: 50%; /* This ensures the column spans 50% of the page width */
     padding: 1.6%;
     padding-top: 3%; /* This ensures there is space between the top of the column and the headings */
-    height: 400px; /* Set height of column to 400px - may need further adjustment*/
+    /* height: 625px; Set height of column to 400px - may need further adjustment */
+    height: max-content;
     background-color: white;
 }
 
@@ -422,14 +461,15 @@ footer {
     width: 50%;
     padding: 1.6%;
     padding-top: 1.9%;
-    height: 400px;
+    /* height: 625px; */
+    height: max-content;
     background-color: #4d4d4d;
 }
 
 /* This inserts something after the content of selected elements
    (row class in this case) */
 .row:after {
-    content: ""; /* Leaving this blank allows footer to be displayed, overwriting a column */
+    content: ''; /* Leaving this blank allows footer to be displayed, overwriting a column */
     display: table;
     clear: both; /* Clears any other elements from floating on left or right of this element. */
 }
@@ -453,13 +493,21 @@ footer {
 
 /* movePopup animation: moves button from off the right side of screen to it's fixed location */
 @keyframes movePopup {
-    from {right: -40vw;}
-    to {right: 1.75vw;}
+    from {
+        right: -40vw;
+    }
+    to {
+        right: 1.75vw;
+    }
 }
 
 @-webkit-keyframes movePopup {
-    from {right: -40vw;}
-    to {right: 1.75vw;}
+    from {
+        right: -40vw;
+    }
+    to {
+        right: 1.75vw;
+    }
 }
 
 /* Styling for contact form */
@@ -480,9 +528,9 @@ footer {
 }
 
 /* Input fields */
-.form-container input[type=text] {
+.form-container input[type='text'] {
     width: 100%; /* Input boxes fill width of container */
-    padding:  0.93vw;
+    padding: 0.93vw;
     margin: 0.6vw 0 0.6vw 0; /* Add space between input boxes and labels */
     border: none; /* Remove border from input boxes */
     background: Gainsboro; /* Set background color of input boxes */
@@ -491,7 +539,7 @@ footer {
 
 /* General styling for all buttons */
 button {
-    font-family: "Trebuchet MS", Optima;
+    font-family: 'Trebuchet MS', Optima;
     letter-spacing: 0.3vw;
     font-size: 1.5vw;
     font-weight: bold;
@@ -502,7 +550,8 @@ button {
 }
 
 /* Hover effect for contact and submit buttons */
-button:hover, .form-container .btn:hover {
+button:hover,
+.form-container .btn:hover {
     color: white; /* White text in butons when hovering */
     background-color: black; /* Black background when hovering */
     transition-duration: 1s;
@@ -533,7 +582,3 @@ button:hover, .form-container .btn:hover {
     -webkit-transition-duration: 1s;
     border-color: black;
 }
-
-
-
-

@@ -63,20 +63,24 @@
                     <div class="text">I'm available for development work!</div>
                 </div>
                 <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, JS logos">
-                    <div class="text">I'm a full stack developer, trained in: HTML, CSS, JavaScript,</div>
-                </div>
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
-                    <div class="text">the popular programming language Python,</div>
-                </div>
-                <div class="mySlides fade">
                     <img class="Slideshow_Images" src="images/Node-JS-01.jpg" alt="Node.JS logo">
-                    <div class="text">Node.js JavaScript server environment,</div>
+                    <div class="text">Node.js</div>
                 </div>
                 <div class="mySlides fade">
                     <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo">
-                    <div class="text">back end development, databases and SQL.</div>
+                    <div class="text">SQL databases</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/MongoDB_Logo_500x500.png" alt="MongoDB logo">
+                    <div class="text">NoSQL databases</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, JS logos">
+                    <div class="text">Full stack development, trained in: HTML, CSS, JavaScript</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
+                    <div class="text">Popular programming language Python</div>
                 </div>
                 <!-- Previous and next buttons -->
                 <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
@@ -107,18 +111,18 @@
             <h1>About</h1>
             <p>
                 I am a seasoned software developer and I love building applications.
-                I have worked on large corporate enterprise dashboard products, providing back-end service
-                connections to Azure, AWS and VMware clouds, databases and others via REST APIs, SDKs, and CLIs.
+                I have worked on large corporate enterprise dashboard products, building back-end services
+                connecting to Azure, AWS, databases and other systems via REST APIs and SDKs.
                 <br>
-                <br>I wanted to expande my front-end knowledge and am a graduate of <a
-                    href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software
+                <br>I wanted to expand my front-end development knowledge and am a graduate of <a
+                    href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Advanced
+                JavaScript
                 Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML,
                 CSS,
-                JavaScript/NodeJS, SQL, C# and more.
+                JavaScript/NodeJS, ExpressJS, SQL, NoSQL and more.
                 <br>
-                <br>I am a full-stack developer and would love to work with you on your project. <a
-                    href="#contact">Contact</a> me
-                below!
+                <br>I am a full-stack developer with a focus on back-end micro-services and, would love to work with you
+                on your project. <a href="#contact">Contact</a> me below!
             </p>
         </div>
     </div>
@@ -129,10 +133,21 @@
         <div class="column_1">
             <h1>GitHub</h1>
             <p>
-                You can view my projects on GitHub here:
-                <br>
-                <p class="center"><a href="https://github.com/aihrig" target="_blank">Arlo Ihrig's GitHub</a></p>
+                You can view my projects on GitHub here: <a href="https://github.com/aihrig" target="_blank">Arlo
+                    Ihrig's GitHub</a>
             </p>
+            <ul>
+                <li class="list_item"><a
+                        href="https://github.com/aihrig/TechAcademy-Advanced-JS/tree/master/FullStackTodo"
+                        target="_blank">MEAN Full-stack Todo App</a></li>
+            </ul>
+            <ul>
+                <li class="list_item"><a href="https://github.com/aihrig/Conductor-Python" target="_blank">Experimental
+                        IoT train controller (Python, NodeMCU, OOP methodology)</a></li>
+            </ul>
+
+
+
         </div>
         <!-- Right column -->
         <div class="column_2">
@@ -148,26 +163,26 @@
 
         <div class="form-popup" id="myForm">
             <form action="https://formspree.io/f/mrgrzzno" method="POST" class="form-container">
-            <h1>Contact</h1>
-            <label for="name"><b>Name</b></label>
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
                 <input type="text" placeholder="Name" name="name" required>
-            <label for="phone"><b>Phone</b></label>
+                <label for="phone"><b>Phone</b></label>
                 <input type="text" placeholder="Phone" name="phone" required>
-            <label for="email"><b>Email</b></label>
+                <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Email" name="email" required>
-            <label for="message"><b>Message</b></label>
+                <label for="message"><b>Message</b></label>
                 <input type="text" placeholder="Message" name="message" required>
 
-            <button type="submit" class="btn">SUBMIT</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
         </div>
     </div>
 
     <!-- Footer section -->
     <footer>
         <p>
-            <p class="center footer">&copy; Arlo Ihrig</p>
-            <br>
+        <p class="center footer">&copy; Arlo Ihrig</p>
+        <br>
         </p>
     </footer>
 
